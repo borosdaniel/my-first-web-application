@@ -79,15 +79,22 @@ imagesData.forEach((item, index) => {
     $('.thumbnaildivs:last-child .thumbnails').attr('src', imagesData[index].photo);
     });
 
+$('.thumbnaildivs:first-child .thumbnails').css('border', '7px solid sienna');
+
 /* THUMBNAIL EVENTS */
 
 $('.thumbnails').click((event) => {
     let imageDataIndex = $(event.target).attr('data-index');
     currentPhoto = imageDataIndex;
     loadPhoto(currentPhoto);
+    $('.thumbnails').css('border', '3px solid sienna');
+    let allThumbnails = document.querySelectorAll('.thumbnails');
+    let selectedThumbnailIndex = $(event.target).attr('data-index');
+    allThumbnails[selectedThumbnailIndex].style.border = '7px solid sienna';
     });
-/* A thumbnailre kattintva a 'currentPhoto' értéke a thumbnail létrehozásakor megkapott index számára változik
-   és újra lefut a 'loadPhoto' függvény. */
+/* A thumbnailre kattintva:
+   - a 'currentPhoto' értéke a thumbnail létrehozásakor megkapott index számára változik és újra lefut a 'loadPhoto' függvény,
+   - minden thumbnail border-je eredeti állapotába tér vissza, a kiválasztott thumbnail border-je vastagabb lesz.*/
 
 $('.thumbnails').mouseenter((event) => {
     let thumbnailDataIndex = $(event.target).attr('data-index');

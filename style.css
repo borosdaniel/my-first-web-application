@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     margin: auto;
-    background-image: radial-gradient(white, grey);
+    background-image: linear-gradient(to right, cornflowerblue, lightskyblue, cornflowerblue);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,7 +16,6 @@
     background: transparent;
     margin: auto;
     margin-top: 70px;
-    box-shadow: 0 8px 6px -3px black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,7 +58,8 @@
 #left-arrow {
     width: 50px;
     height: 400px;
-    background-image: linear-gradient(to right, grey, whitesmoke);
+    background: sienna;
+    border-radius: 10px 0px 0px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,8 @@
 #right-arrow {
     width: 50px;
     height: 400px;
-    background-image: linear-gradient(to left, grey, whitesmoke);
+    background: sienna;
+    border-radius: 0px 10px 10px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,7 +112,7 @@
     color: white;
     font-size: 15px;
     font-family: 'Iceland', cursive;
-    border-radius: 3px;
+    border-radius: 5px;
     text-align: center;
     margin: 0px 0px 20px 0px;
     padding: 2px 5px 2px 5px;
@@ -135,6 +136,7 @@
     width: 100px;
     height: 70px;
     object-fit: cover;
-    border: 3px solid white;
+    border: 3px solid sienna;
+    border-radius: 5px;
     box-shadow: 0 8px 6px -3px black;
 }
